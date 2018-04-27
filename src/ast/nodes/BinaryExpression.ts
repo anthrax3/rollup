@@ -1,6 +1,6 @@
 import { ObjectPath, UNKNOWN_VALUE } from '../values';
 import ExecutionPathOptions from '../ExecutionPathOptions';
-import { NodeType } from './NodeType';
+import * as NodeType from './NodeType';
 import { ExpressionNode, NodeBase } from './shared/Node';
 
 export type BinaryOperator =
@@ -55,7 +55,7 @@ const operators: {
 };
 
 export default class BinaryExpression extends NodeBase {
-	type: NodeType.BinaryExpression;
+	type: NodeType.tBinaryExpression;
 	left: ExpressionNode;
 	right: ExpressionNode;
 	operator: BinaryOperator;

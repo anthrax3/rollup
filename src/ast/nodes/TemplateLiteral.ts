@@ -1,7 +1,7 @@
 import TemplateElement from './TemplateElement';
 import MagicString from 'magic-string';
 import { ExpressionNode, Node, NodeBase } from './shared/Node';
-import { NodeType } from './NodeType';
+import * as NodeType from './NodeType';
 import { RenderOptions } from '../../utils/renderHelpers';
 
 export function isTemplateLiteral(node: Node): node is TemplateLiteral {
@@ -9,7 +9,7 @@ export function isTemplateLiteral(node: Node): node is TemplateLiteral {
 }
 
 export default class TemplateLiteral extends NodeBase {
-	type: NodeType.TemplateLiteral;
+	type: NodeType.tTemplateLiteral;
 	quasis: TemplateElement[];
 	expressions: ExpressionNode[];
 
