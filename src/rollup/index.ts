@@ -1,5 +1,5 @@
 import { getTimings, initialiseTimers, timeEnd, timeStart } from '../utils/timers';
-import { basename, resolve, dirname, relative } from '../utils/path';
+import { basename, relative } from '../utils/path';
 import { writeFile } from '../utils/fs';
 import { mapSequence } from '../utils/promise';
 import error from '../utils/error';
